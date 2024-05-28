@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const newTab = document.createElement("li")
     const tabTitle = document.createElement("span")
     const newIframe = document.createElement("iframe")
-    newIframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-pointer-lock"
+    newIframe.sandbox = "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals"
     tabTitle.textContent = `New Tab ${tabCounter}`
     tabTitle.className = "tab-title"
     newTab.dataset.tabId = tabCounter
@@ -87,34 +87,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const GoURL = sessionStorage.getItem("GoUrl")
     const URL = sessionStorage.getItem("URL")
 
-if (tabCounter === 0 || tabCounter === 1) {
-  if (GoURL !== null) {
-    if (GoURL.includes("/e/")) {
-      newIframe.src = window.location.origin + GoURL
-      sessionStorage.removeItem("GoUrl")
-    } else {
-      newIframe.src = window.location.origin + "/a/" + GoURL
-      sessionStorage.removeItem("GoUrl")
+    if (tabCounter === 0 || tabCounter === 1) {
+      if (GoURL !== null) {
+        if (GoURL.includes("/e/")) {
+          newIframe.src = window.location.origin + GoURL
+          sessionStorage.removeItem("GoUrl")
+        } else {
+          newIframe.src = window.location.origin + "/a/" + GoURL
+          sessionStorage.removeItem("GoUrl")
+        }
+      } else {
+        newIframe.src = "/"
+      }
+    } else if (tabCounter > 1) {
+      if (URL !== null) {
+        newIframe.src = window.location.origin + URL
+        sessionStorage.removeItem("URL")
+      } else if (GoURL !== null) {
+        if (GoURL.includes("/e/")) {
+          newIframe.src = window.location.origin + GoURL
+          sessionStorage.removeItem("GoUrl")
+        } else {
+          newIframe.src = window.location.origin + "/a/" + GoURL
+          sessionStorage.removeItem("GoUrl")
+        }
+      } else {
+        newIframe.src = "/"
+      }
     }
-  } else {
-    newIframe.src = "/"
-  }
-} else if (tabCounter > 1) {
-  if (URL !== null) {
-    newIframe.src = window.location.origin + URL
-    sessionStorage.removeItem("URL")
-  } else if (GoURL !== null) {
-    if (GoURL.includes("/e/")) {
-      newIframe.src = window.location.origin + GoURL
-      sessionStorage.removeItem("GoUrl")
-    } else {
-      newIframe.src = window.location.origin + "/a/" + GoURL
-      sessionStorage.removeItem("GoUrl")
-    }
-  } else {
-    newIframe.src = "/"
-  }
-}
 
     iframeContainer.appendChild(newIframe)
     tabCounter += 1
