@@ -12,6 +12,12 @@
     "categories": ["all"]
   },
   {
+    "name": "Fancade",
+    "link": "https://play.fancade.com",
+    "image": "/assets/media/icon/fancade.jpg",
+    "categories": ["all"]
+  },
+  {
     "name": "Amazon Luna",
     "link": "https://luna.amazon.com/",
     "image": "/assets/media/icons/amazon-luna.webp",
@@ -1158,12 +1164,6 @@
     "categories": ["all"]
   },
   {
-    "name": "NG Space Company",
-    "link": "https://interstellarnetwork.github.io/interstellar-assets/play/ng-space-company/frontend/dist/index.html",
-    "image": "/assets/media/icons/ng.webp",
-    "categories": ["all"]
-  },
-  {
     "name": "Ninja Cat Exploit",
     "link": "https://html5.gamedistribution.com/rvvASMiM/903ba9346b9d437e9c7e81d672cead44/index.html",
     "image": "/assets/media/icons/ninja-cat.webp",
@@ -1485,9 +1485,7 @@
     "name": "Taming.io",
     "link": "https://taming.io/",
     "image": "/assets/media/icons/tamingio.webp",
-    "categories": ["all"],
-    "error": "true",
-    "say": "Taming.io is currently broken on the proxy and will crash Interstellar when attempted to load."
+    "categories": ["all"]
   },
   {
     "name": "Temple of Boom",
@@ -1873,5 +1871,23 @@
     "link": "https://idle-js-games.github.io/goomyClicker2/",
     "image": "/assets/media/icons/gc2.webp",
     "categories": ["all"]
+  },
+  {
+    "name": "Space Company",
+    "link": "/e/1/space-company/index.html",
+    "image": "/assets/media/icons/sc.png",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Mario Kart DS",
+    "link": "https://seraph.reveriestudios.online/games/mariokartds/index.html",
+    "image": "/assets/media/icons/mariokartds.jpg",
+    "categories": ["all", "emu"]
+  },
+  {
+    "name": "Cooking Mama",
+    "link": "https://seraph.reveriestudios.online/games/cookingmama/index.html",
+    "image": "/assets/media/icons/cookingmama.jpg",
+    "categories": ["all", "emu"]
   }
 ]
